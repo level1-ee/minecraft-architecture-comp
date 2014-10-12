@@ -1,0 +1,473 @@
+
+
+@keyframes clouds {
+	0% {
+		transform: translateX(-60%);
+	}
+	100% {
+		transform: translateX(0%);
+	}
+}
+
+.sun {
+	display: none;
+	width: 200px;
+	height: 200px;
+	background: #FFFFFF;
+	box-shadow: 0px 0px 60px 40px rgba(255,255,255,0.50);
+	left: 50%;
+	margin-left: -100px;
+	position: absolute;
+	top: -150px;
+}
+
+
+body {
+	background: url('../../img/blueprint-bg.png'),
+							#5EA0F4;
+	background-attachment: fixed;
+}
+
+.body-wrap {
+	max-width: 1110px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+.clouds {
+	background:transparent url('../../img/clouds.svg') left top repeat-x;
+	width: 100%;
+	height: 100px;
+	position: absolute;
+	top: 280px;
+	z-index: -5;
+	animation-fill-mode: both;
+	// animation-name: clouds;
+	animation-duration: 50s;
+	animation-iteration-count: 1;
+}
+
+
+
+.organizers-header {
+	margin-top: 30px;
+	text-align: center;
+
+	p {
+		font-family: $ff-brand;
+		font-size: rem-calc(13);
+		color: rgba(#fff, .7);
+	}
+
+	.l1-logo {
+		display: block;
+		@include mq(600) {
+			transform: translateY(8px);
+			display: inline-block;
+		}
+	}
+
+	p.and {
+		display: block;
+		margin: 10px 0px;
+
+		@include mq(600) {
+			transform: translateY(-10px);
+			margin: 0 50px;
+			display: inline-block;
+
+		}
+	}
+
+	.arhitetekt-must-logo {
+		display: block;
+		@include mq(600) {
+			display: inline-block;
+		}
+	}
+
+	p.presents {
+		display: block;
+		margin-top: 20px;
+		text-transform: uppercase;
+		letter-spacing: .7em;
+		margin-bottom: 30px;
+		font-size: rem-calc(13);
+		color: rgba(#fff, .7);
+
+		@include mq(1200) {
+			margin-top: 50px;
+		}
+
+	}
+
+}
+
+.hero {
+	position: relative;
+}
+
+.date {
+	font-family: $ff-brand;
+	color: #ffff00;
+	font-size: rem-calc(15px);
+	position: absolute;
+	text-shadow: 0 2px 0 #3f3f00;
+	// top: 200px;
+	// right: 150px;
+	// transform: rotate(-15deg);
+	text-align: center;
+	width: 100%;
+	top: -10px;
+
+	@include mq(480) {
+		top:0;
+	}
+
+	@include mq(720) {
+		top:10px;
+	}
+
+	@include mq(1200) {
+		font-size: rem-calc(25px);
+		top:15px;
+	}
+
+}
+
+.hero-title {
+	font-family: $ff-brand-alt;
+	font-weight: $fw-brand;
+	font-size: rem-calc(35px);
+	text-transform: uppercase;
+	line-height: 1.5;
+	letter-spacing: -0.1em;
+	display: block;
+	text-align: center;
+	color: white;
+	text-shadow: 0px 5px 0px #000;
+
+	@include mq(480) {
+		font-size: rem-calc(50px);
+	}
+
+	@include mq(720) {
+		font-size: rem-calc(80px);
+	}
+
+	@include mq(1200) {
+		font-size: rem-calc(100px);
+	}
+
+	span {
+		display: inline-block;
+		font-family: $ff-brand;
+		font-weight: $fw-brand;
+		font-size: rem-calc(20px);
+		letter-spacing: 0;
+		text-transform: none;
+		background-image: url('../../img/minecraft_brick.jpg');
+		background-size: (318px/7.41) (320px/7.41);
+		box-shadow: 0px 5px 0px 0px #353535,
+								0 0 2px 0 #353535;
+		text-shadow: 0px 3px 0px #353535;
+		position: relative;
+		top: -10px;
+		padding: 5px 20px;
+
+		@include mq(480) {
+			padding: 5px 40px;
+			top: -35px;
+		}
+
+		@include mq(720) {
+			top: -70px;
+			font-size: rem-calc(40px);
+		}
+
+		@include mq(1200) {
+			font-size: rem-calc(50px);
+		}
+	}
+
+}
+
+.intro-body {
+	background-image: url('../../img/woodplanks.jpg');
+	background-size: (974px/2) (488px/2);
+	font-family: $ff-brand;
+	padding: 5px;
+	box-shadow: 0px 5px 0px 0px #353535,
+							0 0 2px 0 #353535;
+	margin-bottom: 50px;
+	font-size: rem-calc(14px);
+
+	@include mq(500) {
+		padding: 15px;
+	}
+
+	@include mq(720) {
+		font-size: rem-calc(16px);
+		margin-top: -130px;
+		padding: 35px;
+	}
+
+	@include mq(1400) {
+		font-size: rem-calc(20px);
+	}
+
+	p {
+		line-height: 2;
+		margin-bottom: 1em;
+		color: #222;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		a {
+			color: #000;
+			border-bottom: 2px solid #ccc;
+			transition: .5s;
+
+			&:hover {
+				border-bottom: 2px solid #6ca847;
+			}
+
+		}
+
+	}
+
+	.intro-body-inner {
+		background-color: #fff;
+		box-shadow: 0px 0px 2px 0px #353535;
+		padding: 15px;
+
+		@include mq(500) {
+			padding: 25px;
+		}
+
+		@include mq(720) {
+			padding: 70px 50px 50px 50px;
+		}
+
+	}
+}
+
+.btn {
+	background-image: url('../../img/minecraft_stone.jpg');
+	background-size: (320px/5) (320px/5);
+	border: 2px solid #000;
+	color: white;
+	text-shadow: 0px 2px 0px #353535;
+	font-size: rem-calc(20);
+	font-family: $ff-brand-alt;
+	font-weight: $fw-brand;
+	letter-spacing: -0.03em;
+	line-height: 1;
+	text-align: center;
+	margin: 0 auto;
+	display: block;
+	width: 100%;
+	padding: 15px 10px 25px;
+	box-shadow: inset 4px 4px 0px 0px rgba(255,255,255,0.50),
+							inset -4px -4px 0px 0px rgba(0,0,0,0.43);
+
+	&:hover {
+		background-image: linear-gradient( 0deg, rgba(#848eba, .6), rgba(#848eba, .6) ),
+											url('../../img/minecraft_stone.jpg');
+	}
+
+	@include mq(650) {
+		padding: 15px 140px 25px;
+		max-width: 600px;
+	}
+
+}
+
+.button-info-label {
+	font-family: verdana;
+	text-transform: uppercase;
+	font-size: rem-calc(12px);
+	text-align: center;
+	margin-top: 5px;
+	color: white;
+	font-weight: bold;
+}
+
+.sponsors-section {
+	margin-top: 100px;
+	margin-bottom: 300px;
+
+	h2 {
+		font-family: $ff-brand;
+		color: white;
+		text-shadow: 0px 2px 0px #000;
+		font-size: rem-calc(40px);
+		text-align: center;
+		margin-bottom: 50px;
+	}
+
+	ul {
+		list-style: none;
+	}
+
+	li {
+		display: inline-block;
+		vertical-align: middle;
+		width: 100%;
+		text-align: center;
+		margin-bottom: 70px;
+
+		@include mq(920) {
+			width: 33%;
+			margin-bottom: 0;
+		}
+	}
+}
+
+.help-info {
+	background-image: url('../../img/woodplanks.jpg');
+	background-size: (974px/2) (488px/2);
+	font-family: $ff-brand;
+	padding: 5px;
+	margin-top: -130px;
+	font-size: rem-calc(20px);
+	box-shadow: 0px 5px 0px 0px #353535,
+							0 0 2px 0 #353535;
+	margin-bottom: 50px;
+
+	@include mq(500) {
+		padding: 20px;
+	}
+
+	@include mq(720) {
+		padding: 35px;
+	}
+
+	@include clearfix();
+
+	& > div {
+		position: relative;
+		background-color: #fff;
+		box-shadow: 0px 0px 2px 0px #353535;
+		margin-bottom: 30px;
+		padding: 40px 5px 40px 5px;
+
+		@include mq(500) {
+			padding: 40px 15px 40px 15px;
+		}
+
+		@include mq(720) {
+			padding: 70px 30px 40px 30px;
+		}
+
+		@include mq(1000) {
+			width: 48%;
+			float: left;
+
+			&:last-child {
+				float: right;
+			}
+		}
+	}
+
+
+	.info-title {
+		background-image: url('../../img/woodplanks.jpg');
+		background-size: (974px/2) (488px/2);
+		text-shadow: 0px 2px 0px #353535;
+		box-shadow: 0px 2px 0px 0px #353535,
+								0 0 2px 0 #353535;
+		display: inline-block;
+		color: #fff;
+		font-size: rem-calc(25px);
+		min-width: 200px;
+		text-align: center;
+		margin: 0 auto;
+		position: absolute;
+		padding: 15px 20px;
+		left: 50%;
+		margin-left: -100px;
+		text-transform: uppercase;
+		top: -50px;
+	}
+
+	p, ol, ul {
+		font-size: rem-calc(14px);
+		font-family: Verdana, sans-serif;
+		line-height: 1.9;
+		margin-bottom: 1em;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+	}
+
+	ul, ol {
+		padding-left: 1.7em;
+
+		ul, ol {
+			padding-left: 1.2em;
+
+			li {
+				margin-bottom: 0;
+			}
+		}
+
+	}
+
+	li {
+		margin-bottom: 1em;
+	}
+
+}
+
+.footer-deco {
+	background: url('../../img/mcdirt.jpg') center bottom / (319px/2) (320px/2) repeat-x;
+	width: 100%;
+	height: (320px/2);
+}
+
+.contact {
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	margin-bottom: 150px;
+	margin-top: 100px;
+
+
+
+	.contact-label {
+		font-family: Verdana, sans-serif;
+		color: #fff;
+		text-transform: uppercase;
+		font-size: rem-calc(10);
+		text-shadow: 0px 1px 0px #353535;
+		font-weight: bold;
+		letter-spacing: .5em;
+	}
+
+	a {
+		font-family: $ff-brand;
+		text-shadow: 0px 2px 0px #353535;
+		color: #fff;
+		font-size: rem-calc(20px);
+
+		@include mq(720) {
+			font-size: rem-calc(30px);
+		}
+
+		&:hover {
+			text-transform: uppercase;
+		}
+
+	}
+
+}
+
+
+.form {
+	margin-bottom: 300px;
+}
