@@ -285,6 +285,10 @@ body {
 
 }
 
+.btn--disabled {
+	cursor: not-allowed;
+}
+
 .button-info-label {
 	font-family: verdana;
 	text-transform: uppercase;
@@ -610,3 +614,4 @@ html[xmlns] .slides {display: block;}
 		}
 	}
 }
+

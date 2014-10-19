@@ -436,6 +436,9 @@ body {
       padding: 15px 140px 25px;
       max-width: 600px; } }
 
+.btn--disabled {
+  cursor: not-allowed; }
+
 .button-info-label {
   font-family: verdana;
   text-transform: uppercase;
