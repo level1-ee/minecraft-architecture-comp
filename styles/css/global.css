@@ -415,7 +415,7 @@ body {
   background-image: url('../../img/minecraft_stone.jpg');
   background-size: 64px 64px;
   border: 2px solid #000;
-  color: white;
+  color: #fff;
   text-shadow: 0px 2px 0px #353535;
   font-size: 1.25rem;
   font-family: 'Minecrafter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -436,6 +436,21 @@ body {
       padding: 15px 140px 25px;
       max-width: 600px; } }
 
+.btn--register {
+  position: relative; }
+
+.btn--register:after {
+  content: 'Võistluse kaart!';
+  font-family: 'minecraftiaregular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #ffff00;
+  font-size: 25px;
+  -webkit-transform: rotate(12deg);
+      -ms-transform: rotate(12deg);
+          transform: rotate(12deg);
+  position: absolute;
+  right: -25px;
+  top: -5px; }
+
 .btn--disabled {
   cursor: not-allowed; }
 
@@ -445,7 +460,7 @@ body {
   font-size: 0.75rem;
   text-align: center;
   margin-top: 5px;
-  color: white;
+  color: #fff;
   font-weight: bold; }
 
 .sponsors-section {
